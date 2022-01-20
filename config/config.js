@@ -47,10 +47,16 @@ export const POSITION = {
         // {id: 12, x: DISTANCE_BALLS.x*0.3, y:BALL_R ,z: DISTANCE_BALLS.y*2 }
     ],
     boxes: [
-        {x:0, y: 5, z:55, sx:51, sy:10, sz:1},
-        {x:0, y: 5, z:-55, sx:51, sy:10, sz:1},
-        {x:-25, y: 5, z:0, sx:1, sy:10, sz:109},
-        {x:25, y: 5, z:0, sx:1, sy:10, sz:109},
+        // {x:0, y: 5, z:55, sx:50, sy:10, sz:1},
+        {x:0, y: 1.5, z:55, sx:40, sy: 3, sz:1},
+        // {x:0, y: 5, z:-55, sx:50, sy:10, sz:1},
+        {x:0, y: 1.5, z:-55, sx:40, sy:3, sz:1},
+        // {x:-25, y: 5, z:0, sx:1, sy:10, sz:110},
+        {x:-25, y: 1.5, z:26.25, sx:1, sy:3, sz:47.5},
+        {x:-25, y: 1.5, z:-26.25, sx:1, sy:3, sz:47.5},
+        // {x:25, y: 5, z:0, sx:1, sy:10, sz:110},
+        {x:25, y: 1.5, z:26.25, sx:1, sy:3, sz:47.5},
+        {x:25, y: 1.5, z:-26.25, sx:1, sy:3, sz:47.5},
     ],
     cylinders: [
         {x: 12.5, y: -100, z: 38, s1: 5, s2:5, s3: 199.9, col: "green"},

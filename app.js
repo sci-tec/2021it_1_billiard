@@ -53,11 +53,20 @@ function init() {
   });
 
 }
-
+//オブジェクトを使う場所
 function generate() {
+  //床
   objects.push(Ground(1000,1000,0, -200, 0, "blue",PROPS));
-  objects.push(Ground(50, 110, 0, 0, 0, "red"))
-  //壁
+  //billiardの底
+  // objects.push(Ground(50, 110, 0, 0, 0, "red"))
+  objects.push(Ground(40, 110, 0, 0, 0, "red"))
+  // 右床
+  objects.push(Ground(50, 47.5, 0, 0, 26.25))
+  // 左床
+  objects.push(Ground(50, 47.5, 0, 0, -26.25))
+  // 真ん中床
+  objects.push(Ground(40, 0, 0, 0, 0))
+  //billiardを囲む壁
   for(let i=0; i<POSITION.boxes.length; i++) {
     let box = new Box({
       point: {x: POSITION.boxes[i].x, y: POSITION.boxes[i].y, z: POSITION.boxes[i].z},
