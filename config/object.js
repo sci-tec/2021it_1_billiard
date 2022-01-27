@@ -1,29 +1,30 @@
-export function Ground(size1, size2, x, y, z, col,props) {
-    // cannon body ----------
-    // const body = new CANNON.Body({
-    //   mass: 0 // mass == 0 makes the body static
-    // })
-    var body = new CANNON.Body({
-      // mass: mass, // kg
-      mass: 0, // kg
-      position: new CANNON.Vec3(x, y, z), // m
-    })
-    body.addShape(new CANNON.Plane())
-    // cannonではz軸を上向きの軸としてるので、床を設置するとxy面に床が生成される
-    // three.jsだとy軸を上向き軸としがちなので、変な感じにならないようにx軸に90度回転させてあげる。
-    body.quaternion.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), -Math.PI / 2)
-    // three mesh ----------
-    const geometry = new THREE.PlaneGeometry(size1, size2)
-    const material = new THREE.MeshBasicMaterial({
-      color: col,
-      side: THREE.DoubleSide
-    })
-    const mesh = new THREE.Mesh(geometry, material)
-    mesh.rotation.x = -Math.PI / 2
-    mesh.position.y = 0;
+// export function Ground(props) {
+//   const {position, size, weight, mass, color} = props
+//     // cannon body ----------
+//     // const body = new CANNON.Body({
+//     //   mass: 0 // mass == 0 makes the body static
+//     // })
+//     var body = new CANNON.Body({
+//       // mass: mass, // kg
+//       mass: 0, // kg
+//       position: new CANNON.Vec3(position.x, position.y, position.z), // m
+//     })
+//     body.addShape(new CANNON.Plane())
+//     // cannonではz軸を上向きの軸としてるので、床を設置するとxy面に床が生成される
+//     // three.jsだとy軸を上向き軸としがちなので、変な感じにならないようにx軸に90度回転させてあげる。
+//     body.quaternion.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), -Math.PI / 2)
+//     // three mesh ----------
+//     const geometry = new THREE.PlaneGeometry(size.s1, size.s2)
+//     const material = new THREE.MeshBasicMaterial({
+//       color: color,
+//       side: THREE.DoubleSide
+//     })
+//     const mesh = new THREE.Mesh(geometry, material)
+//     mesh.rotation.x = -Math.PI / 2
+//     mesh.position.y = 0;
   
-    return { body, mesh }
-}
+//     return { body, mesh }
+// }
 
 export function Cylinder(props) {
   const {position, size, weight, mass, color} = props
@@ -40,7 +41,7 @@ export function Cylinder(props) {
 
 
 export function Box(props) {
-    const {point, size, weight, mass} = props
+    const {point, size, weight, mass,color} = props
     var body = new CANNON.Body({
       mass: 0, // kg
       position: new CANNON.Vec3(point.x, point.y, point.z), // m
@@ -50,7 +51,7 @@ export function Box(props) {
     // body.angularVelocity.set(Math.random(), Math.random(), 0)
     var geometry = new THREE.BoxGeometry(size.x, size.y, size.z)
     var material = new THREE.MeshStandardMaterial({
-      color: 0xaa0000,
+      color: color,
       roughness: 0.0
     })
     var mesh = new THREE.Mesh(geometry, material)

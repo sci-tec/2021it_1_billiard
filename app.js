@@ -1,5 +1,5 @@
 import { POSITION, PROPS } from './config/config.js'
-import { Ground, Box, Sphere, Cylinder } from './config/object.js'
+import { Box, Sphere, Cylinder } from './config/object.js'
 let scene, world;
 let camera, controls, renderer;
 let objects;
@@ -56,23 +56,33 @@ function init() {
 //オブジェクトを使う場所
 function generate() {
   //床
-  objects.push(Ground(1000,1000,0, -200, 0, "blue",PROPS));
-  //billiardの底
-  // objects.push(Ground(50, 110, 0, 0, 0, "red"))
-  objects.push(Ground(40, 110, 0, 0, 0, "red"))
-  // 右床
-  objects.push(Ground(50, 48.75, 0, 0, 25.625,"red"))
-  // 左床
-  objects.push(Ground(50, 48.75, 0, 0, -25.625,"red"))
-  // 真ん中床
-  objects.push(Ground(40, 0, 0, 0, 0,"red"))
+  // objects.push(Ground(1000,1000,0, 0, 0, "blue",PROPS));
+  // //billiardの底
+  // // objects.push(Ground(50, 110, 0, 0, 0, "red"))
+  // objects.push(Ground(40, 110, 0, 20, 0, "red"))
+  // // 右床
+  // objects.push(Ground(50, 48.75, 0, 20, 25.625,"red"))
+  // // 左床
+  // objects.push(Ground(50, 48.75, 0, 20, -25.625,"red"))
+  // // 真ん中床
+  // objects.push(Ground(40, 0, 0, 20, 0,"red"))
   //billiardを囲む壁
+  // for(let i=0; i<POSITION.grounds.length; i++) {
+  //   let ground = new Ground({
+  //     position: {x: POSITION.grounds[i].x, y: POSITION.grounds[i].y, z: POSITION.grounds[i].z,},
+  //     size: {s1:POSITION.grounds[i].s1, s2: POSITION.grounds[i].s2},
+  //     color: POSITION.grounds[i].col,
+  //     weight: PROPS.initWeight,
+  //   })
+  //   objects.push(ground);
+  // }
   for(let i=0; i<POSITION.boxes.length; i++) {
     let box = new Box({
       point: {x: POSITION.boxes[i].x, y: POSITION.boxes[i].y, z: POSITION.boxes[i].z},
       size: {x: POSITION.boxes[i].sx, y: POSITION.boxes[i].sy, z: POSITION.boxes[i].sz},
       weight: PROPS.initWeight,
-      mass: PROPS.initMass
+      mass: PROPS.initMass,
+      color: POSITION.boxes[i].col
     })
     objects.push(box);
   }
