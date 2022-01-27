@@ -61,11 +61,11 @@ function generate() {
   // objects.push(Ground(50, 110, 0, 0, 0, "red"))
   objects.push(Ground(40, 110, 0, 0, 0, "red"))
   // 右床
-  objects.push(Ground(50, 47.5, 0, 0, 26.25))
+  objects.push(Ground(50, 48.75, 0, 0, 25.625,"red"))
   // 左床
-  objects.push(Ground(50, 47.5, 0, 0, -26.25))
+  objects.push(Ground(50, 48.75, 0, 0, -25.625,"red"))
   // 真ん中床
-  objects.push(Ground(40, 0, 0, 0, 0))
+  objects.push(Ground(40, 0, 0, 0, 0,"red"))
   //billiardを囲む壁
   for(let i=0; i<POSITION.boxes.length; i++) {
     let box = new Box({
