@@ -8,7 +8,8 @@ let lastTime
 
 const fixedTimeStep = 1.0 / 60.0; // seconds
 const maxSubSteps = 10;
-
+const initWeight = 1;
+const initMass = 1;
 window.onload = function() {
   init()
   render()
@@ -46,7 +47,7 @@ function init() {
   document.body.appendChild(renderer.domElement)
 
   $("#btnFire").click((e)=>{
-    myball.body.velocity.set(0,0,50)
+    myball.body.velocity.set(0,0,2)
   });
   $("#btnFireRandom").click((e)=>{
     myball.body.velocity.set(Math.random()*100-50,0,Math.random()*100-50);
@@ -102,10 +103,6 @@ function generate() {
     let ball = new Sphere({
       // color: POSITION.eightBall[i].col,
       point: {x: POSITION.eightBall[i].x, y: POSITION.eightBall[i].y, z: POSITION.eightBall[i].z},
-      size: {x: PROPS.r, y: PROPS.r, z: PROPS.r},
-      weight: PROPS.initWeight,
-      mass: PROPS.initMass,
-      r: PROPS.r
     }, `images/${i+1}.png` )
     objects.push(ball);
   }
@@ -114,10 +111,6 @@ function generate() {
   myball = new Sphere({
     color: POSITION.myball.col,
     point: {x: POSITION.myball.x, y: POSITION.myball.y, z: POSITION.myball.z},
-    size: {x: PROPS.r, y: PROPS.r, z: PROPS.r},
-    weight: PROPS.initWeight,
-    mass: PROPS.initMass,
-    r: PROPS.r
   }, `images/9.png` )
   objects.push(myball);
 

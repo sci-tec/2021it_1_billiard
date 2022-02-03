@@ -64,17 +64,17 @@ export function Box(props) {
 */
 export function Sphere(props, textureImage) {
   
-    const {point, mass, r} = props
+    const {weight,point} = props
     var body = new CANNON.Body({
-      // mass: mass, // kg
-      mass: 5, // kg
+      // mass: mass, // k 
+      mass: 1, // kg
       position: new CANNON.Vec3(point.x, point.y, point.z), // m
-      shape: new CANNON.Sphere(props.r)
+      shape: new CANNON.Sphere((0.057))
     })
-    
+    console.log(body);
     console.log(props);
 
-    const geometry = new THREE.SphereGeometry( r, 32, 16 );
+    const geometry = new THREE.SphereGeometry(0.057,32,16);
     // const material = new THREE.MeshBasicMaterial( { color: props.color } );
   
     // マテリアルにテクスチャーを設定
