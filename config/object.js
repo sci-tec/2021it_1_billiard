@@ -41,7 +41,8 @@ export function Cylinder(props) {
 
 
 export function Box(props) {
-    const {point, size, weight, mass,color} = props
+    const {point, size, weight, mass,color, image} = props
+    console.log(image);
     var body = new CANNON.Body({
       mass: 0, // kg
       position: new CANNON.Vec3(point.x, point.y, point.z), // m
@@ -54,6 +55,14 @@ export function Box(props) {
       color: color,
       roughness: 0.0
     })
+
+    if(image != undefined) {
+      const texture = THREE.ImageUtils.loadTexture(`images/${image}`) // 画像テクスチャ
+      material = new THREE.MeshPhongMaterial({map: texture}) // 画像テクスチャのマテリアル
+    } else {
+      
+    }
+
     var mesh = new THREE.Mesh(geometry, material)
     mesh.position.set(point.x, point.y, point.z)
     return { body, mesh }
