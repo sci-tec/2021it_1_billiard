@@ -27,61 +27,65 @@
 // }
 
 export function Cylinder(props) {
-  const {position, size, weight, mass, color} = props
-  let mesh = new THREE.Mesh(
-    new THREE.CylinderGeometry(size.s1, size.s2, size.s3, 50),
-    new THREE.MeshPhongMaterial({ 
-    color: color
-  })); 
-  // scene.add(Cylinder); 
-  // let geometry = THREE.CylinderGeometry()
-  mesh.position.set(position.x, position.y, position.z);
-  return { body:null, mesh };
-}
-
-
-export function Box(props) {
-    const {point, size, weight, mass,color} = props
-    var body = new CANNON.Body({
-      mass: 0, // kg
-      position: new CANNON.Vec3(point.x, point.y, point.z), // m
-      shape: new CANNON.Box(new CANNON.Vec3(size.x / 2, size.y / 2, size.z / 2))
-    })
-    // 回転追加してみる
-    // body.angularVelocity.set(Math.random(), Math.random(), 0)
-    var geometry = new THREE.BoxGeometry(size.x, size.y, size.z)
-    var material = new THREE.MeshStandardMaterial({
-      color: color,
-      roughness: 0.0
-    })
-    var mesh = new THREE.Mesh(geometry, material)
-    mesh.position.set(point.x, point.y, point.z)
-    return { body, mesh }
-}
-    
-/**
- ボールを作る
-*/
-export function Sphere(props, textureImage) {
+	const {position, size, weight, mass, color} = props
+	let mesh = new THREE.Mesh(
+	  new THREE.CylinderGeometry(size.s1, size.s2, size.s3, 50),
+	  new THREE.MeshPhongMaterial({ 
+	  color: color
+	})); 
+	// scene.add(Cylinder); 
+	// let geometry = THREE.CylinderGeometry()
+	mesh.position.set(position.x, position.y, position.z);
+	return { body:null, mesh };
+  }
   
-    const {weight,point} = props
-    var body = new CANNON.Body({
-      // mass: mass, // k 
-      mass: 1, // kg
-      position: new CANNON.Vec3(point.x, point.y, point.z), // m
-      shape: new CANNON.Sphere((0.057))
-    })
-    console.log(body);
-    console.log(props);
-
-    const geometry = new THREE.SphereGeometry(0.057,32,16);
-    // const material = new THREE.MeshBasicMaterial( { color: props.color } );
   
-    // マテリアルにテクスチャーを設定
-    const material = new THREE.MeshStandardMaterial({
-      map: new THREE.TextureLoader().load(textureImage)
-    });
+  export function Box(props) {
+	  const {point, size, weight, mass,color} = props
+	  var body = new CANNON.Body({
+		mass: 0, // kg
+		position: new CANNON.Vec3(point.x, point.y, point.z), // m
+		shape: new CANNON.Box(new CANNON.Vec3(size.x / 2, size.y / 2, size.z / 2))
+	  })
+	  // 回転追加してみる
+	  // body.angularVelocity.set(Math.random(), Math.random(), 0)
+	  var geometry = new THREE.BoxGeometry(size.x, size.y, size.z)
+	  var material = new THREE.MeshStandardMaterial({
+		color: color,
+		roughness: 0.0
+	  })
+	  var mesh = new THREE.Mesh(geometry, material)
+	  mesh.position.set(point.x, point.y, point.z)
+	  return { body, mesh }
+  }
+	  
+  /**
+   ボールを作る
+  */
+  export function Sphere(props, textureImage) {
+	
+	  const {weight,point,color} = props
+	  var body = new CANNON.Body({
+		// mass: mass, // k 
+		mass: 1, // kg
+		position: new CANNON.Vec3(point.x, point.y, point.z), // m
+		shape: new CANNON.Sphere((0.057))
+	  })
+	  console.log(body);
+	  console.log(props);
   
-    const mesh = new THREE.Mesh( geometry, material );
-    return { body, mesh }
-}
+	  const geometry = new THREE.SphereGeometry(0.057,32,16);
+	  // const material = new THREE.MeshBasicMaterial( { color: props.color } );
+	
+	  // マテリアルにテクスチャーを設定
+	  const material = new THREE.MeshStandardMaterial({
+		map: new THREE.TextureLoader().load(textureImage),
+		color: color,
+	  });
+	  new THREE.MeshPhongMaterial({ 
+		  color: color
+	  });
+	  
+	  const mesh = new THREE.Mesh( geometry, material );
+	  return { body, mesh }
+  }
