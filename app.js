@@ -83,8 +83,7 @@ function generate() {
       size: {x: POSITION.boxes[i].sx, y: POSITION.boxes[i].sy, z: POSITION.boxes[i].sz},
       weight: PROPS.initWeight,
       mass: PROPS.initMass,
-      color: POSITION.boxes[i].col,
-      image: POSITION.boxes[i].image
+      color: POSITION.boxes[i].col
     })
     objects.push(box);
   }
