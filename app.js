@@ -111,7 +111,7 @@ function generate() {
   myball = new Sphere({
 	color: POSITION.myball.col,
     point: {x: POSITION.myball.x, y: POSITION.myball.y, z: POSITION.myball.z},
-  })
+  }, "/images/myball.png");
   objects.push(myball);
 
 
@@ -148,4 +148,4 @@ function animate(time) {
 
 function render() {
   renderer.render(scene, camera)
-}
+} 
