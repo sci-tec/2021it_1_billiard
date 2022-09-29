@@ -110,9 +110,9 @@ function generate() {
 
   // 自玉
   myball = new Sphere({
-    color: POSITION.myball.col,
+	color: POSITION.myball.col,
     point: {x: POSITION.myball.x, y: POSITION.myball.y, z: POSITION.myball.z},
-  }, `images/9.png` )
+  })
   objects.push(myball);
 
 

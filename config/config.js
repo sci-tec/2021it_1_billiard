@@ -1,4 +1,4 @@
-let BALL_R = 0.11;
+let BALL_R = 0.115;
 
 function getDegree(degree) {
     return degree*(Math.PI/180);  
@@ -34,7 +34,24 @@ export const POSITION = {
         y: 0,
         z: 0
     },
-    myball: {id: 0, x: DISTANCE_BALLS.x*0 , y: BALL_R + 0.5,z: DISTANCE_BALLS.y*0-0.725},
+    // myball: {id: 0, x: DISTANCE_BALLS.x*0 , y: BALL_R + 0.5,z: DISTANCE_BALLS.y*0-0.725},
+    // eightBall: [
+    //     {id: 1, x: DISTANCE_BALLS.x*0, y: BALL_R + 0.5,z: DISTANCE_BALLS.y*0+0.725},
+        
+    //     {id: 2, x: DISTANCE_BALLS.x*0.5, y: BALL_R + 0.5, z: DISTANCE_BALLS.y*0.5+0.725},
+    //     {id: 3, x: DISTANCE_BALLS.x*-0.5, y: BALL_R + 0.5,z: DISTANCE_BALLS.y*0.5+0.725},
+        
+    //     {id: 4, x: DISTANCE_BALLS.x*1, y: BALL_R +0.5,z: DISTANCE_BALLS.y*1+0.725},
+    //     {id: 5, x: DISTANCE_BALLS.x*0, y: BALL_R + 0.5,z: DISTANCE_BALLS.y*1+0.725},
+    //     {id: 6, x: DISTANCE_BALLS.x*-1, y: BALL_R + 0.5,z: DISTANCE_BALLS.y*1+0.725},
+        
+    //     {id: 7, x: DISTANCE_BALLS.x*1.5, y: BALL_R + 0.5,z: DISTANCE_BALLS.y*1.5+0.725},
+    //     {id: 8, x: DISTANCE_BALLS.x*0.5, y: BALL_R + 0.5,z: DISTANCE_BALLS.y*1.5+0.725},
+    //     {id: 9, x: DISTANCE_BALLS.x*-0.5, y: BALL_R + 0.5,z: DISTANCE_BALLS.y*1.5+0.725},
+    //     {id: 10, x: DISTANCE_BALLS.x*-1.5, y: BALL_R +0.5,z: DISTANCE_BALLS.y*1.5+0.725},
+    //     // 散らし目的のダミーボール２個
+    // ],
+	myball: {id: 0, x: DISTANCE_BALLS.x*0 , y: BALL_R + 0.5,z: DISTANCE_BALLS.y*0-0.725},
     eightBall: [
         {id: 1, x: DISTANCE_BALLS.x*0, y: BALL_R + 0.5,z: DISTANCE_BALLS.y*0+0.725},
         
