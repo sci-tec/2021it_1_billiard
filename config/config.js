@@ -83,9 +83,9 @@ export const POSITION = {
     //     // billiardの底
         {x: 0, y: 0.505, z: 0, sx: 1.374, sy: 0.1, sz: 2.9, col: "red"},
     //     //右床
-        {x: 0,y: 0.505, z:0.69895, sx: 1.6, sy: 0.1, sz: 1.2725, col: "red"},
+        {x: 0,y: 0.505, z:0.69895, sx: 1.6, sy: 0.1, sz: 1.2725, col: "red", image: "dai.jpg"},
     // //     //左床    
-        {x: 0, y: 0.505, z: -0.69895, sx: 1.6, sy: 0.1, sz: 1.2725, col: "red"},
+        {x: 0, y: 0.505, z: -0.69895, sx: 1.6, sy: 0.1, sz: 1.2725, col: "red", image: "dai.jpg"},
     //     // 真ん中の床
     //     {x : 0, y : 20, z: 10, sx: 40, sy: 0.1, sz: 5, col: "red"}
     ],
