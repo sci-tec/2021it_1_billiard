@@ -19,34 +19,30 @@ html .container .scene, body .container .scene {
   position: absolute;
 }
 
-html .container #1, body .container #1 {
+html .container #a, body .container #a {
   height: 100%;
   width: 100%;
 }
 
-html .container #1 .titleBackground, body .container #1 .titleBackground {
-  height: auto;
-  width: auto;
+html .container #a .images, body .container #a .images {
+  aspect-ratio: auto;
 }
 
-html .container #1 .titleBackground #image1, body .container #1 .titleBackground #image1 {
-  aspect-ratio: auto;
+html .container #a #image1, body .container #a #image1 {
   width: 100%;
   height: 100vh;
-  background-image: url(/images/24491028_s.jpg);
+  background-image: url(/images/titleBackground.jpg);
   background-size: cover;
   background-position: center;
 }
 
-html .container #1 .titleLogo, body .container #1 .titleLogo {
-  aspect-ratio: auto;
-  left: 400px;
-  top: -500px;
-  height: auto;
-  width: 25%;
+html .container #a #image2, body .container #a #image2 {
+  background-image: url(/images/billiardlogo.png);
+  height: 100%;
+  width: 100%;
 }
 
-html .container #2, body .container #2 {
+html .container #b, body .container #b {
   position: fixed;
 }
 /*# sourceMappingURL=style.css.map */
