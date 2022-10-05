@@ -44,7 +44,9 @@ function init() {
 
   renderer = new THREE.WebGLRenderer()
   renderer.setSize(window.innerWidth, window.innerHeight)
-  document.body.appendChild(renderer.domElement)
+//   document.body.appendChild(renderer.domElement)
+
+$(".container").prepend(renderer.domElement)
 
   $("#btnFire").click((e)=>{
     myball.body.velocity.set(0,0,2)
@@ -60,7 +62,7 @@ function generate() {
   // objects.push(Ground(1000,1000,0, 0, 0, "blue",PROPS));
   // //billiardの底
   // // objects.push(Ground(50, 110, 0, 0, 0, "red"))
-  // objects.push(Ground(40, 110, 0, 20, 0, "red"))
+  // objects.push(Ground(40, 110, 0, 20, 0, "red"))++++++
   // // 右床
   // objects.push(Ground(50, 48.75, 0, 20, 25.625,"red"))
   // // 左床

@@ -1,53 +1,64 @@
 html, body {
+
 	height: 100%;
 	width: 100%;
 	margin: 0;
 	padding: 0;
 	background-color: #ff0f;
+	// canvas {
+	// 	position: absolute;
+	// }
 
 	.container {
+		
 		width: 100%;
 		height: 100%;
 		position: relative;
 		background-color: #ff0f0f;
 
 		.scene {
+			
 			height: 100%;
 			width: 100%;
 			position: absolute;
+		
 		}
+		#a {
 
-		#1 {
-		   height: 100%;
-		   width: 100%;
+			height: 100%;
+			width: 100%;
 			
-		    .titleBackground {
-				height: auto;
-				width: auto;
+			.images {
 
-				#image1 {
-					aspect-ratio: auto;
-					width: 100%;
-					height: 100vh;
-					background-image: url(/images/24491028_s.jpg);
-					background-size: cover;
-					background-position: center;
-				}
-			    
+				aspect-ratio: auto;
+			
+			}
+			#image1 {
+				
+				width: 100%;
+				height: 100vh;
+				background-image: url(/images/titleBackground.jpg);
+				background-size: cover;
+				background-position: center;
 
 			}
-		    .titleLogo {
-			    aspect-ratio: auto;
-			    // position: relative;
-			    left: 400px;
-			    top: -500px;
-			   // display: flex;
-			    height: auto;
-			    width: 25%;
+
+		    #image2 {
+			    
+				background-image: url(/images/billiardlogo.png);
+			//     position: relative;
+			//     left: 400px;
+			//     top: -500px;
+			//    // display: flex;
+			    height: 100%;
+			    width: 100%;
+
 		    }
 		}   
-	  	#2 {
+	  	#b {
+
 		    position: fixed;
+
 	   }
 	}
 }
