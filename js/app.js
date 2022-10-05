@@ -1,5 +1,5 @@
-import { POSITION, PROPS } from './config/config.js'
-import { Box, Sphere, Cylinder } from './config/object.js'
+import { POSITION, PROPS } from './config.js'
+import { Box, Sphere, Cylinder } from './object.js'
 let scene, world;
 let camera, controls, renderer;
 let objects;
@@ -103,7 +103,7 @@ function generate() {
     let ball = new Sphere({
       // color: POSITION.eightBall[i].col,
       point: {x: POSITION.eightBall[i].x, y: POSITION.eightBall[i].y, z: POSITION.eightBall[i].z},
-    }, `images/${i+1}.png` )
+    }, `../images/${i+1}.png`);
     objects.push(ball);
   }
 
