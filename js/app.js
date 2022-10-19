@@ -94,8 +94,9 @@ function generate() {
       size: {x: POSITION.boxes[i].sx, y: POSITION.boxes[i].sy, z: POSITION.boxes[i].sz},
       weight: PROPS.initWeight,
       mass: PROPS.initMass,
-      color: POSITION.boxes[i].col
-    })
+      color: POSITION.boxes[i].col,
+	  texture: POSITION.boxes[i].texture,
+    });
     objects.push(box);
   }
   for(let i=0; i<POSITION.cylinders.length; i++) {

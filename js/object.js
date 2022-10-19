@@ -41,7 +41,7 @@ export function Cylinder(props) {
 
 
 export function Box(props) {
-    const {point, size, weight, mass,color} = props
+    var {point, size, weight, mass,color,texture, } = props
     var body = new CANNON.Body({
       mass: 0, // kg
       position: new CANNON.Vec3(point.x, point.y, point.z), // m
@@ -49,10 +49,13 @@ export function Box(props) {
     })
     // 回転追加してみる
     // body.angularVelocity.set(Math.random(), Math.random(), 0)
+	var textureLoader = new THREE.TextureLoader();
+	var texture = textureLoader.load("../images/table.png");
     var geometry = new THREE.BoxGeometry(size.x, size.y, size.z)
     var material = new THREE.MeshStandardMaterial({
+	  map: texture,
       color: color,
-      roughness: 0.0
+      roughness: 0.0,
     })
     var mesh = new THREE.Mesh(geometry, material)
     mesh.position.set(point.x, point.y, point.z)
