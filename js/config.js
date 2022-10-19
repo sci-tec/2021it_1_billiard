@@ -8,7 +8,7 @@ export const PROPS = {
     // initWeight: 50,
     // positionY : 500,
     color1: "#23372f",
-    color2: "red",
+    // color2: "red",
     initWeight: 1,
     initMass: 1
 
@@ -70,30 +70,80 @@ export const POSITION = {
     ],
     boxes: [
         //縦2枚
-        {x:0, y: 0.505, z:1.5, sx:1.6, sy: 0.1, sz:0.1},
-        {x:0, y: 0.505, z:-1.5, sx:1.6, sy:0.1, sz:0.1},
+        // {x:0, y: 0.505, z:1.5, sx:1.6, sy: 0.1, sz:0.1, texture: ("../images/board.png")},
+		{x:0, y: 0.55, z:1.5, sx:1.8, sy: 0.2, sz:0.1, texture: ("../images/board.png")},
+        // {x:0, y: 0.505, z:-1.5, sx:1.6, sy:0.1, sz:0.1, texture: ("../images/board.png")},
+		{x:0, y: 0.55, z:-1.5, sx:1.8, sy:0.2, sz:0.1, texture: ("../images/board.png")},
         //横４枚
-        {x:-0.85, y: 0.505, z:0.69895, sx:0.1, sy:0.1, sz:/*1.2725*/1.45,},
-        {x:-0.85, y: 0.505, z:0.69895, sx:0.1, sy:0.1, sz:/*1.2725*/1.45,},
-        {x:-0.85, y: 0.505, z:-0.69895, sx:0.1, sy:0.1, sz:/*1.2725*/1.45},
-        {x:0.85, y: 0.505, z:0.69895, sx:0.1, sy:0.1, sz:/*1.2725*/1.45},
-        {x:0.85, y: 0.505, z:-0.69895, sx:0.1, sy:0.1, sz:/*1.2725*/1.45},
+        {x:-0.85, y: 0.55, z:0.69895, sx:0.1, sy:0.2, sz:/*1.2725*/1.53, texture: ("../images/board.png")},
+        {x:-0.85, y: 0.55, z:0.69895, sx:0.1, sy:0.2, sz:/*1.2725*/1.53, texture: ("../images/board.png")},
+        {x:-0.85, y: 0.55, z:-0.69895, sx:0.1, sy:0.2, sz:/*1.2725*/1.53, texture: ("../images/board.png")},
+        {x:0.85, y: 0.55, z:0.69895, sx:0.1, sy:0.2, sz:/*1.2725*/1.53, texture: ("../images/board.png")},
+        {x:0.85, y: 0.55, z:-0.69895, sx:0.1, sy:0.2, sz:/*1.2725*/1.53, texture: ("../images/board.png")},
         // 床
-        {x: 0, y: 0, z: 0, sx: 1000, sy: 0.1,sz: 1000,col: "blue"},
+        {x: -1, y: 0, z: -1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 1, y: 0, z: 1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 1, y: 0, z: -1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -1, y: 0, z: 1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+
+		
+		{x: -1, y: 0, z: -3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 1, y: 0, z: -3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -1, y: 0, z: 3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 1, y: 0, z: 3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+
+		{x: 3, y: 0, z: 1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 3, y: 0, z: -1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -3, y: 0, z: 1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -3, y: 0, z: -1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+
+		{x: -3, y: 0, z: -3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -3, y: 0, z: 3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 3, y: 0, z: -3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 3, y: 0, z: 3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+
+
+
+		{x: 5, y: 0, z: 1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 5, y: 0, z: -1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -5, y: 0, z: 1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -5, y: 0, z: -1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+
+		{x: -1, y: 0, z: -5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -1, y: 0, z: 5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 1, y: 0, z: -5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 1, y: 0, z: 5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		
+		{x: -5, y: 0, z: 5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -5, y: 0, z: -5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 5, y: 0, z: -5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 5, y: 0, z: 5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+
+		{x: 3, y: 0, z: 5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 3, y: 0, z: -5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -3, y: 0, z: -5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -3, y: 0, z: 5, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+
+		{x: -5, y: 0, z: 3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: -5, y: 0, z: -3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 5, y: 0, z: -3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+		{x: 5, y: 0, z: 3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
+
     //     // billiardの底
-        {x: 0, y: 0.505, z: 0, sx: 1.374, sy: 0.1, sz: 2.9, col: "red"},
+        // {x: 0, y: 0.505, z: 0, sx: 1.374, sy: 0.1, sz: 2.9, texture: ("../images/table.png")},
+		{x: 0, y: 0.505, z: 0, sx: 1.37, sy: 0.1, sz: 2.9, texture: ("../images/table.png")},
     //     //右床
-        {x: 0,y: 0.505, z:0.69895, sx: 1.6, sy: 0.1, sz: 1.2725, texture: ("../images/table.png")},
+        {x: 0,y: 0.505, z:0.69895, sx: 1.6, sy: 0.1, sz: 1.272, texture: ("../images/table.png")},
     // //     //左床    
-        {x: 0, y: 0.505, z: -0.69895, sx: 1.6, sy: 0.1, sz: 1.2725},
+        {x: 0, y: 0.505, z: -0.69895, sx: 1.6, sy: 0.1, sz: 1.272,texture: ("../images/table.png")},
     //     // 真ん中の床
     //     {x : 0, y : 20, z: 10, sx: 40, sy: 0.1, sz: 5, col: "red"}
     ],
     cylinders: [
-        {x: 1.25, y: 0.25, z: 3.8, s1: 0.5, s2:0.5, s3: 0.5, col: "green"},
-        {x: -1.25, y: 0.25, z: -3.8, s1: 0.5, s2:0.5, s3: 0.5, col: "green"},
-        {x: -1.25, y: 0.25, z: 3.8, s1: 0.5, s2:0.5, s3: 0.5, col: "green"},
-        {x: 1.25, y: 0.25, z: -3.8, s1: 0.5, s2:0.5, s3: 0.5, col: "green"},
+        // {x: 1.25, y: 0.25, z: 3.8, s1: 0.5, s2:0.5, s3: 0.5, col: "green"},
+        // {x: -1.25, y: 0.25, z: -3.8, s1: 0.5, s2:0.5, s3: 0.5, col: "green"},
+        // {x: -1.25, y: 0.25, z: 3.8, s1: 0.5, s2:0.5, s3: 0.5, col: "green"},
+        // {x: 1.25, y: 0.25, z: -3.8, s1: 0.5, s2:0.5, s3: 0.5, col: "green"},
     ],
     // grounds: [
     //     //床

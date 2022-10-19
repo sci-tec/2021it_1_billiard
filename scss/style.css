@@ -21,7 +21,6 @@ html .container .scene, body .container .scene {
 html .container #a, body .container #a {
   height: 100%;
   width: 100%;
-  position: absolute;
   top: 0px;
   width: 100%;
   height: 100vh;
@@ -49,6 +48,9 @@ html .container #a #image1, body .container #a #image1 {
 }
 
 html .container #b, body .container #b {
+  width: auto;
+  height: auto;
   position: fixed;
+  top: 0px;
 }
 /*# sourceMappingURL=style.css.map */
