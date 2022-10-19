@@ -11,9 +11,18 @@ const maxSubSteps = 10;
 const initWeight = 1;
 const initMass = 1;
 window.onload = function() {
+  showtitle()
   init()
   render()
   animate(0)
+}
+
+function showtitle() {
+	$(()=>{
+		$("#a").click(()=>{
+			$("#a").hide()
+		})
+	})
 }
 
 function init() {
