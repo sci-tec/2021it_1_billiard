@@ -50,10 +50,13 @@ export function Box(props) {
     // 回転追加してみる
     // body.angularVelocity.set(Math.random(), Math.random(), 0)
 	var textureLoader = new THREE.TextureLoader();
-	var texture = textureLoader.load("../images/table.png");
+	var tx = null;
+	if(texture) {
+		var tx = textureLoader.load(texture);
+	}
     var geometry = new THREE.BoxGeometry(size.x, size.y, size.z)
     var material = new THREE.MeshStandardMaterial({
-	  map: texture,
+	  map: tx,
       color: color,
       roughness: 0.0,
     })
