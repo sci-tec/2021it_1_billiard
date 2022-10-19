@@ -4,7 +4,7 @@ html, body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #ff0f;
+	
 	// canvas {
 	// 	position: absolute;
 	// }
@@ -27,31 +27,32 @@ html, body {
 
 			height: 100%;
 			width: 100%;
-			
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			height: 100vh;
+			background-image: url(/images/titleBackground.jpg);
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
 			.images {
 
 				aspect-ratio: auto;
 			
 			}
-			#image1 {
-				
-				width: 100%;
-				height: 100vh;
-				background-image: url(/images/titleBackground.jpg);
-				background-size: cover;
-				background-position: center;
 
-			}
-
-		    #image2 {
+		    #image1 {
 			    
-				background-image: url(/images/billiardlogo.png);
+				
 			//     position: relative;
 			//     left: 400px;
 			//     top: -500px;
 			//    // display: flex;
-			    height: 100%;
-			    width: 100%;
+			    height: auto;
+			    width: auto;
 
 		    }
 		}   
