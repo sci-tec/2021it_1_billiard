@@ -80,6 +80,7 @@ export const POSITION = {
         {x:-0.85, y: 0.55, z:-0.69895, sx:0.1, sy:0.2, sz:/*1.2725*/1.53, texture: ("../images/board.png")},
         {x:0.85, y: 0.55, z:0.69895, sx:0.1, sy:0.2, sz:/*1.2725*/1.53, texture: ("../images/board.png")},
         {x:0.85, y: 0.55, z:-0.69895, sx:0.1, sy:0.2, sz:/*1.2725*/1.53, texture: ("../images/board.png")},
+
         // 床
         {x: -1, y: 0, z: -1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
 		{x: 1, y: 0, z: 1, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
@@ -129,6 +130,8 @@ export const POSITION = {
 		{x: 5, y: 0, z: -3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
 		{x: 5, y: 0, z: 3, sx: 2, sy: 0.01,sz: 2, texture: ("../images/floor.png")},
 
+
+		
     //     // billiardの底
         // {x: 0, y: 0.505, z: 0, sx: 1.374, sy: 0.1, sz: 2.9, texture: ("../images/table.png")},
 		{x: 0, y: 0.505, z: 0, sx: 1.37, sy: 0.1, sz: 2.9, texture: ("../images/table.png")},
