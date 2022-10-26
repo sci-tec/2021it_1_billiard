@@ -8,8 +8,8 @@ let lastTime
 
 const fixedTimeStep = 1.0 / 60.0; // seconds
 const maxSubSteps = 10;
-const initWeight = 1;
-const initMass = 1;
+// const initWeight = 1;
+// const initMass = 1;
 window.onload = function() {
   showtitle()
   init()
@@ -88,17 +88,52 @@ function generate() {
   //   })
   //   objects.push(ground);
   // }
-  for(let i=0; i<POSITION.boxes.length; i++) {
-    let box = new Box({
-      point: {x: POSITION.boxes[i].x, y: POSITION.boxes[i].y, z: POSITION.boxes[i].z},
-      size: {x: POSITION.boxes[i].sx, y: POSITION.boxes[i].sy, z: POSITION.boxes[i].sz},
-      weight: PROPS.initWeight,
-      mass: PROPS.initMass,
-      color: POSITION.boxes[i].col,
-	  texture: POSITION.boxes[i].texture,
-    });
-    objects.push(box);
-  }
+	let boxes = [];
+	function floor(numx,numy, numz, xaxis, yaxis, zaxis, sizex, sizey, sizez, color, texture) {
+		for(let i = 0; i < numx; ++i) {
+			for(let j = 0; i < numz; ++i) {
+				for(let i = 0; i < numy; ++i) {
+					let box = new Box({
+						point: {x: xaxis + (i * xaxis), y: yaxis + (i * yaxis), z: zaxis + (i * zaxis)},
+						size: {x: sizex, y: sizey, sizez},
+						weight: PROPS.initWeight,
+						mass: PROPS.initMass,
+						color: color,
+						texture: (texture),
+					});
+					boxes[i] = box;
+				}	
+			}
+			
+		}
+		objects.push(boxes);
+	}
+	floor(100,0,0,1,0,-1,2,0,2,null, "..images/floor.png");
+// function timestable(x,y, sx, sy) {
+//     let currentX = 0;
+//     let currentY = 0;
+//     for(let i=1; i<=y; i++) {
+//         for(let j=1; j<=x; j++) {
+//             console.log(currentX, currentY);
+//             currentX+=sx;            
+//             currentY+=sy;            
+//         }
+// 		currentX-0;
+//     }
+// }
+// timestable(2,2,2,2);
+
+//   for(let i=0; i<POSITION.boxes.length; i++) {
+//     let box = new Box({
+//       point: {x: POSITION.boxes[i].x, y: POSITION.boxes[i].y, z: POSITION.boxes[i].z},
+//       size: {x: POSITION.boxes[i].sx, y: POSITION.boxes[i].sy, z: POSITION.boxes[i].sz},
+//       weight: PROPS.initWeight,
+//       mass: PROPS.initMass,
+//       color: POSITION.boxes[i].col,
+// 	  texture: POSITION.boxes[i].texture,
+//     })
+//     objects.push(box);
+//   }
   for(let i=0; i<POSITION.cylinders.length; i++) {
     let cylinder = new Cylinder({
     position: {x: POSITION.cylinders[i].x, y: POSITION.cylinders[i].y, z: POSITION.cylinders[i].z},
@@ -160,4 +195,4 @@ function animate(time) {
 
 function render() {
   renderer.render(scene, camera)
-} 
+}
